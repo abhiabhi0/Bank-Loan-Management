@@ -35,10 +35,10 @@ int main(int argc, char *argv[]) {
         {
             //index 1-Bank name, 2-Borrower name, 3-Principal, 4-Years, 5-Rate
 
-            //convert string to double and int
-            double principal = std::stod(cmd_strs[3]); 
+            //convert string to int
+            int principal = std::stoi(cmd_strs[3]); 
             int years = std::stoi(cmd_strs[4]);
-            double interest_rate = std::stod(cmd_strs[5]);
+            int interest_rate = std::stoi(cmd_strs[5]);
 
             //Insert Bank object in map banks
             if (banks.find(cmd_strs[1]) == banks.end())
@@ -57,7 +57,14 @@ int main(int argc, char *argv[]) {
         }
         else if (cmd_strs[0] == "PAYMENT")
         {
+            //index 1-Bank name, 2-Borrower name, 3-lump sum, 4-emi number
 
+            //convert string to int
+            int lump_sum = stoi(cmd_strs[3]);
+            int emi_num = stoi(cmd_strs[4]);
+
+            Bank bank = banks[cmd_strs[1]];
+            bank.payment(cmd_strs[1], cmd_strs[2], lump_sum, emi_num);
         }
         else  
         {
