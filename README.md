@@ -17,4 +17,5 @@ chmod +x run.sh
 ```
 
 Enter input in file `sample_input/input1.txt`
+
 Output is displayed on the terminal
