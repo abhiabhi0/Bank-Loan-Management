@@ -34,7 +34,7 @@ class User
                                                         total_emis(total_emis_),
                                                         emi_amt(emi_amt_)               
                                                         {}
-    //~User()  = default;
+    ~User()  = default;
 
     //add new lump payment in the lump sum paid and vector lump_payments
     void add_payment(double, int);
