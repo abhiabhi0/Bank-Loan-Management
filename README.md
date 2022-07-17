@@ -9,7 +9,7 @@
 ```
 git clone https://github.com/programmercave0/Bank-Loan-Management.git
 
-cd Bank-Loan-Management
+cd Bank-Loan-Management/
 
 chmod +x run.sh
 
